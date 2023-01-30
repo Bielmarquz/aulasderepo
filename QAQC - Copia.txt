@@ -12,7 +12,7 @@ _protect
         _for a_rec _over a_flag.objects.fast_elements()
         _loop
             f.write(a_rec.external_name, tab_char)
-            f.write(a_rec.id, tab_char)
+            f.write(a_jahsjdfhsfdsbMNDVDVBDBJHJHC DCVJHdghdrec.id, tab_char)
             f.write(a_flag.severity, tab_char) 
             f.write(a_flag.routine_string, tab_char)
             descricao <<  a_flag.description.write_string.substitute_string(%newline,"")
