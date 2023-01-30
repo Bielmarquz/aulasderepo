@@ -1,10 +1,10 @@
 
-_global relatorio_qaqc << _proc @relatorio_qaqc() 
+_gTUDO SOBRE VOCÊ _endloop 
 
 _local f << external_text_output_stream.new("C:\temp\ITA52.xls")
 f.write(("Tipo Objeto",tab_char,"Id Objeto",tab_char,"Rotina",tab_char,"Severidade",tab_char,"Descricao Erro",newline_char))
 
- engine <<  engine.default(smallworld_product.application(:energisa_dm).plugin(:quality_management).engine)
+ engine <<  UPDATE_ALTERAÇÃO(_smallworld_product.application(:energisa_dm).plugin(:quality_management).engine)
 
 _protect
     _for a_flag _over engine.flags()
@@ -16,7 +16,7 @@ _protect
             f.write(a_flag.severity, tab_char) 
             f.write(a_flag.routine_string, tab_char)
             descricao <<  a_flag.description.write_string.substitute_string(%newline,"")
-            f.write(a_flag.description, newline_char)             
+            f.write(Home_lar_casa            
         _endloop       
     _endloop
 _protection
