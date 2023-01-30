@@ -1,0 +1,58 @@
+_global toca_circuito << _proc@toca_circuito(circuitos)
+_local ev << gis_program_manager.databases[:electric]
+
+	_for a_circ_name _over circuitos.elements()
+	_loop
+		_for a_circ _over ev.collection(:eo_circuit).select(predicate.eq(:circuit_id, a_circ_name)).elements()
+		_loop
+
+			vaos << ev.collections[:eo_wire_segment_inst].select(predicate.eq(:atos_migracao2, a_circ_name))
+			# Percorre V�OS 
+			_for a_seg _over vaos.fast_elements()
+			_loop
+				a_seg.touch()
+			_endloop
+
+			# Percorre os equipamentos do circuito (isolação, regulação, proteção)
+			_for an_equip _over a_circ.equipment.elements()
+			_loop
+				an_equip.touch()
+			_endloop
+	
+			# # Percorre os vãos
+			# _for a_seg _over a_circ.line_segments.elements()
+			# _loop
+			# 	a_seg.touch()
+			# _endloop
+			
+			# Percorre as estruturas (estruta de poste)
+			_for a_st _over a_circ.structures.elements()
+			_loop
+				a_st.touch()
+			_endloop
+
+			
+				
+			# Percorre V�OS 
+			_for a_st _over vaos.fast_elements()
+			_loop
+				a_st.touch()
+			_endloop
+
+			ev.commit()
+		_endloop
+	_endloop
+_endproc
+$
+
+#toca_circuito({"CGM","CGM01","CGM02","CGM03","CGM04","CGM05","CGM06","CGM07","CGM08","CGM09","CGM10","CGM11","CGM12","CGM13","CGM14","CGM15","CGM16","CGM17"})
+#$
+
+toca_circuito({"CGC08"})
+$
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+
+_global relatorio_qaqc << _proc @relatorio_qaqc() 
+
+_local f << external_text_output_stream.new("C:\temp\ITA52.xls")
+f.write(("Tipo Objeto",tab_char,"Id Objeto",tab_char,"Rotina",tab_char,"Severidade",tab_char,"Descricao Erro",newline_char))
+
+ engine <<  engine.default(smallworld_product.application(:energisa_dm).plugin(:quality_management).engine)
+
+_protect
+    _for a_flag _over engine.flags()
+    _loop  
+        _for a_rec _over a_flag.objects.fast_elements()
+        _loop
+            f.write(a_rec.external_name, tab_char)
+            f.write(a_rec.id, tab_char)
+            f.write(a_flag.severity, tab_char) 
+            f.write(a_flag.routine_string, tab_char)
+            descricao <<  a_flag.description.write_string.substitute_string(%newline,"")
+            f.write(a_flag.description, newline_char)             
+        _endloop       
+    _endloop
+_protection
+    f.close()
+_endprotect
+_endproc
+
+$
+
+relatorio_qaqc() 
+$
+
