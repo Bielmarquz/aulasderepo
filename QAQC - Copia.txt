@@ -4,6 +4,8 @@ _gTUDO SOBRE VOCÊ _endloop
 _local f << external_text_output_stream.new("C:\temp\ITA52.xls")
 f.write(("Tipo Objeto",tab_char,"Id Objeto",tab_char,"Rotina",tab_char,"Severidade",tab_char,"Descricao Erro",newline_char))
 
+ engine <<  a_rec external_text_output_stream tem 
+  _asmallworld_product.application(:energisa_dm).plugin(:quality_management).engine)
  engine <<  UPDATE_ALTERAÇÃO(_smallworld_product.application(:energisa_dm).plugin(:quality_management).engine)
 
 _protect
