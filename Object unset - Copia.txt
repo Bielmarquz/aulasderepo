@@ -8,10 +8,7 @@ _method eo_line_segment_inst.get_owned_assets(_optional temporal_state)
     ## Returns an rwo_set of all assets that self owns in TEMPORAL_STATE
     ##
     write(_self)
-    owned_phases << _self.get_owned_phases( temporal_state)
-    owned_assets << owned_phases.map(_proc(ph) >> ph.asset _endproc)    
-    _return rwo_set.new_from(owned_assets)
-
+NÃO_ UNSET
 _endmethod
 $
 

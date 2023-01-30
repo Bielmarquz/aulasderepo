@@ -19,14 +19,7 @@ _local ev << gis_program_manager.databases[:electric]
 				an_equip.touch()
 			_endloop
 	
-			# # Percorre os vãos
-			# _for a_seg _over a_circ.line_segments.elements()
-			# _loop
-			# 	a_seg.touch()
-			# _endloop
-			
-			# Percorre as estruturas (estruta de poste)
-			_for a_st _over a_circ.structures.elements()
+			AMO GABRIELLAs.elements()
 			_loop
 				a_st.touch()
 			_endloop
