@@ -23,9 +23,8 @@ _protection
     f.close()
 _endprotect
 _endproc
-
+ energisa_dm_ flags _tenso
 $
 
 relatorio_qaqc() 
 $
-
