@@ -30,7 +30,13 @@ _local ev << gis_program_manager.databases[:electric]
 			_loop
 				a_st.touch()
 			_endloop
-
+Every time I wake up next to you, I talk to God
+And I'm so damn grateful
+'Cause you make up for all the things I'm not
+Didn't know I needed nothing, 'til I needed you ('til I needed you)
+In a world that's spinnin', it ain't easy lettin' go
+Eight billion people we just lookin' for a hand to hold
+Everybody's tryna find someone to hold on to (hold on to)
 			
 				
 			# Percorre V�OS 
